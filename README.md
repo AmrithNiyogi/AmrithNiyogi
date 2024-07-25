@@ -1,8 +1,6 @@
-## Hi there 👋
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=vision-friendly-dark)](https://github.com/amrithniyogi/github-readme-stats)
-
 <!--
+
+## Hi there 👋
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...
