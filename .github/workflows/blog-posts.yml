@@ -1,0 +1,25 @@
+name: latest writing
+
+on:
+  schedule:
+    # daily at 01:30 UTC
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull latest posts into README
+        uses: gautamkrishnar/blog-post-workflow@1.9.7
+        with:
+          feed_list: "https://medium.com/feed/@amrithniyogi"
+          max_post_count: 4
+          template: "- [$title]($url) — $date$newline"
+          date_format: "mmm yyyy"
+          commit_message: "chore: refresh latest writing"
